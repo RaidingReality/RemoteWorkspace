@@ -29,6 +29,10 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.greatland.init.GreatlandModTabs;
+import net.mcreator.greatland.init.GreatlandModItems;
+import net.mcreator.greatland.init.GreatlandModEntities;
+
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
@@ -45,8 +49,11 @@ public class GreatlandMod {
 
 	public GreatlandMod() {
 		MinecraftForge.EVENT_BUS.register(this);
-
+		GreatlandModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+		GreatlandModItems.REGISTRY.register(bus);
+		GreatlandModEntities.REGISTRY.register(bus);
 
 	}
 

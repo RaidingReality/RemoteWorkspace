@@ -1,9 +1,39 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "Greatland",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "greatland",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Woodling",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "woodling",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/greatland/forge/biome_modifier/woodling_biome_modifier.json",
+          "src/main/java/net/mcreator/greatland/client/renderer/WoodlingRenderer.java",
+          "src/main/resources/assets/greatland/models/item/woodling_spawn_egg.json",
+          "src/main/java/net/mcreator/greatland/entity/WoodlingEntity.java"
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "itemGroup.tabgreatland": "Greatland",
+      "entity.greatland.woodling": "Woodling",
+      "item.greatland.woodling_spawn_egg": "Woodling Spawn Egg"
+    }
   },
   "foldersRoot": {
     "name": "~",
